@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
   <link href="elementary.min.css" rel="stylesheet" type="text/css">
   <style>
+    html,body{height:100%;width:100%padding:0;margin:0}
     body {
       background-color: #0392F9;
       text-align: center;
@@ -24,23 +25,36 @@
       margin: .5em 0;
     }
     .row {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: .5em;
       font-size: 4em;
-      margin: .5em 0;
+      clear: left;
+    }
+    .icon {
+      display: inline-block;
+      width: 20%;
+      min-width: 1em;
     }
   </style>
 </head>
 <body>
   <div class="title">elementary</div>
-  <div class="subtitle">lightweight, css-only, single-element</div>
+  <div class="subtitle">a lightweight, css-only, single-element, bare-essentials icon set</div>
   <div class="subtitle">usage: &lt;span class="e-search"&gt;&lt;/span&gt;</div>
-  <div class="row"><span class="e-search"></span></div>
-  <div class="row"><span class="e-mail"></span></div>
-  <div class="row"><span class="e-lock"></span></div>
-  <div class="row"><span class="e-bars"></span></div>
-  <div class="row"><span class="e-home"></span></div>
-  <div class="row"><span class="e-loader"></span></div>
-  <div class="row"><span class="e-check"></span></div>
-  <div class="row"><span class="e-times"></span></div>
+  <div class="row">
+    <div class="icon"><span class="e-search"></span></div>
+    <div class="icon"><span class="e-mail"></span></div>
+    <div class="icon"><span class="e-lock"></span></div>
+    <div class="icon"><span class="e-bars"></span></div>
+  </div>
+  <div class="row">
+    <div class="icon"><span class="e-home"></span></div>
+    <div class="icon"><span class="e-loader"></span></div>
+    <div class="icon"><span class="e-check"></span></div>
+    <div class="icon"><span class="e-times"></span></div>
+  </div>
 </body>
 </html>
 
