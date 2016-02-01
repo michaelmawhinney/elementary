@@ -16,7 +16,7 @@ var csscomb       = require('gulp-csscomb');
 var cssmin        = require('gulp-cssmin');
 
 gulp.task('sass', function(){
-  return gulp.src('scss/ico.scss')
+  return gulp.src('scss/elementary.scss')
 //    .pipe(plumber())
     .pipe(sass({precision:8}))
     .pipe(autoprefixer({
@@ -27,7 +27,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('cssmin', function(){
-  return gulp.src('dist/ico.css')
+  return gulp.src('dist/elementary.css')
     .pipe(cssmin())
     .pipe(rename({
       suffix: '.min'
