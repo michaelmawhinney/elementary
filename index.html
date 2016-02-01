@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>elementary: a lightweight, pure-css, single-element icon set</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=PT-Mono" rel="stylesheet" type="text/css">
+  <link href="normalize.min.css" rel="stylesheet" type="text/css">
+  <link href="elementary.min.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background-color: #0392F9;
+      text-align: center;
+      padding: 3rem 2rem;
+      font-size: 24px;
+      font-size: 2.5vw;
+    }
+    .title {
+      font-family: "Open Sans", sans-serif;
+      font-size: 10vw;
+      line-height: 1;
+    }
+    .title2 { font-size: 4vw; }
+    .subtitle,.title2 {
+      font-family: "Open Sans", sans-serif;
+      margin: .5em 0;
+    }
+    .row {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: .75em;
+      font-size: 4em;
+      clear: left;
+    }
+    .icon {
+      display: inline-block;
+      width: 40%;
+    }
+    .icon > small {
+      font-size: .25em;
+      font-family: "PT Mono", monospace;
+      display: block;
+      margin-top: 1em;
+    }
+    .nowrap { white-space: nowrap; }
+    @media screen and (max-width:500px) {
+      body { font-size: 5vw; }
+      .title { font-size: 12vw; }
+      .title2 { font-size: 5vw; }
+      .subtitle { font-size: 3.5vw; }
+    }
+  </style>
+</head>
+<body>
+  <div class="title">elementary</div>
+  <div class="title2">a bare-essentials icon set</div>
+  <div class="subtitle"><span class="nowrap">ultra-lightweight,</span> <span class="nowrap">pure-css,</span> <span class="nowrap">single-element</span></div>
+<!--
+  <div class="subtitle">
+    include: &lt;link rel="stylesheet" crossorigin="anonymous" <br>
+    href="https://cdn.rawgit.com/michaelmawhinney/elementary/master/dist/elementary.min.css" <br>
+    integrity="sha384-579EO7A+KEAgD6DVqHjVvMvnPFVxi7ojhq9otLYv+zfUq3778n66TBbeq7ui1NCZ"&gt;</div>
+  </div>
+-->  <div class="subtitle"><b>usage:</b> &lt;span class="e-<b>iconName</b>"&gt;&lt;/span&gt;</div>
+  <div class="row">
+    <div class="icon"><span class="e-search"></span><small>e-search</small></div>
+    <div class="icon"><span class="e-mail"></span><small>e-mail</small></div>
+    </div>
+  <div class="row">
+    <div class="icon"><span class="e-lock"></span><small>e-lock</small></div>
+    <div class="icon"><span class="e-bars"></span><small>e-bars</small></div>
+  </div>
+  <div class="row">
+    <div class="icon"><span class="e-home"></span><small>e-home</small></div>
+    <div class="icon"><span class="e-loader"></span><small>e-loader</small></div>
+  </div>
+  <div class="row">
+    <div class="icon"><span class="e-check"></span><small>e-check</small></div>
+    <div class="icon"><span class="e-times"></span><small>e-times</small></div>
+  </div>
+</body>
+</html>
+
+ 
