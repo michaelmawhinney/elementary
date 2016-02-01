@@ -1,0 +1,37 @@
+/* -- Gear -- */
+
+$gearwidth: 1em;
+
+.#{$prefix}-gear {
+  &::before {
+  }
+}
+
+
+
+
+
+
+
+/*
+
+
+.#{$prefix}-gear {
+
+  width: $gearwidth;
+  height: $gearwidth;
+  border-radius: 50%;
+  border: $gearwidth/3.2 solid;
+
+  &::before {
+    width: $gearwidth;
+    height: $gearwidth;
+border-style: solid;
+border-width:1px 0;
+border-radius:50%;
+//color:red;
+  }
+
+}
+
+*/

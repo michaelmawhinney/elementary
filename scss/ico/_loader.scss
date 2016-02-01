@@ -1,0 +1,61 @@
+/* -- Loader -- */
+
+$loaderwidth: .6em;
+
+.#{$prefix}-loader::before,
+.#{$prefix}-loader::after,
+.#{$prefix}-loader {
+  border-radius: 50%;
+  width: .5*$loaderwidth;
+  height: .5*$loaderwidth;
+  animation-fill-mode: both;
+  animation: #{$prefix}-p 1.5s infinite linear;
+}
+
+.#{$prefix}-loader {
+  position: relative;
+  top: -.5em;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.2s;
+}
+
+.#{$prefix}-loader::before {
+  left: -.6*$loaderwidth;
+  animation-delay: -0.4s;
+}
+
+.#{$prefix}-loader::after {
+  left: .6*$loaderwidth;
+}
+
+
+@keyframes #{$prefix}-p {
+  0%,
+  20%,
+  80%,
+  100% {
+    box-shadow: 0 .5*$loaderwidth 0 -.175*$loaderwidth;
+  }
+  50% {
+    box-shadow: 0 .5*$loaderwidth 0 0;
+  }
+
+}
+
+/*
+
+@keyframes #{$prefix}-p {
+  0%,
+  90%,
+  100% {
+    box-shadow: 0 .5*$loaderwidth 0 0;
+  }
+  45% {
+    box-shadow: 0 .5*$loaderwidth 0 -.175*$loaderwidth;
+  }
+
+}
+
+*/
+

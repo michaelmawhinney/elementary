@@ -1,0 +1,24 @@
+/* -- Home -- */
+
+$mult: .18em;
+.#{$prefix}-home {
+
+  width: 5*$mult;
+  height: 3*$mult;
+  border: 0 solid;
+  border-width: 1.5*$mult 2*$mult 0;
+
+  &::before {
+    border: 2.4748737341529164*$mult solid;
+    width: 4.9497474683058327*$mult;
+    height: 4.9497474683058327*$mult;
+
+    transform: rotate(45deg) translate(0) perspective(9em);
+    left: -1.9748737341529163*$mult;
+    top: -3.5*$mult;
+    border-radius:.5*$mult;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+
+}

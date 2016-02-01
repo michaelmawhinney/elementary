@@ -1,0 +1,25 @@
+/* -- Lock -- */
+
+$lw: 1.3em;
+
+.#{$prefix}-lock {
+
+  width: .65*$lw;
+  height: .43*$lw;
+  box-shadow: inset 0 0 0 2*$lw;
+  border-radius: .06*$lw;
+  position: relative;
+  top: .2*$lw;
+
+  &::before {
+    height: .6*$lw;
+    width: .48*$lw;
+    border-radius: .3*$lw;
+    border: .1*$lw solid;
+    position: absolute;
+    top:-.35*$lw;
+    left:50%;
+    margin-left: -.24*$lw;
+  }
+
+}

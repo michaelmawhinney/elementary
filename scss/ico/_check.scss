@@ -1,0 +1,12 @@
+/* -- Check -- */
+
+.#{$prefix}-check {
+
+  width: .9em;
+  height: .6em;
+  border-width: 0 0 .24em .24em;
+  border-style: solid;
+  transform: rotate(-45deg) perspective(9em);
+  top: -.12em;
+
+}
