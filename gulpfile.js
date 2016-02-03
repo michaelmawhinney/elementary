@@ -36,7 +36,7 @@ gulp.task('cssmin', function(){
 });
 
 gulp.task('clean', function () {  
-  return del(['dist/css']);
+  return del(['dist']);
 });
 
 gulp.task('watch',['sass'],function(){
@@ -50,3 +50,4 @@ gulp.task('default',function(callback){
 gulp.task('css',function(callback){
   runsequence('clean','sass','cssmin',callback);
 });
+

@@ -1,5 +1,8 @@
 /*! elementary v0.0.0-alpha | git.io/elementary */
 /* -- Required for all icons -- */
+/* -- CONSTANTS -- */
+/* -- Variables -- */
+/* -- Common Definitions --*/
 [class*='e-']
 {
     position: relative;
@@ -25,6 +28,7 @@
     content: '';
 }
 
+/* --  Debugging -- */
 /*
 [class*="e-"] {
 background-color: red;
@@ -163,7 +167,7 @@ border: 1px solid yellow;
     width: .3em;
     height: .3em;
 
-    animation: e-p 1.5s infinite linear; 
+    animation: e-p 1.2s infinite linear; 
 
     border-radius: 50%;
 
@@ -207,21 +211,6 @@ border: 1px solid yellow;
     }
 }
 
-/*
-
-@keyframes e-p {
-  0%,
-  90%,
-  100% {
-    box-shadow: 0 .5*$loaderwidth 0 0;
-  }
-  45% {
-    box-shadow: 0 .5*$loaderwidth 0 -.175*$loaderwidth;
-  }
-
-}
-
-*/
 /* -- Check -- */
 .e-check
 {
@@ -257,25 +246,38 @@ border: 1px solid yellow;
 }
 
 /* -- Gear -- */
-/*
+.e-gear
+{
+    overflow: hidden;
 
+    width: .9em;
+    height: .9em;
+    margin-right: .05em; 
+    margin-left: .05em;
 
-.e-gear {
+    border-radius: 50%;
+}
+.e-gear::before
+{
+    top: .09375em; 
+    left: .09375em;
 
-  width: $gearwidth;
-  height: $gearwidth;
-  border-radius: 50%;
-  border: $gearwidth/3.2 solid;
+    width: .7125em;
+    height: .7125em;
 
-  &::before {
-    width: $gearwidth;
-    height: $gearwidth;
-border-style: solid;
-border-width:1px 0;
-border-radius:50%;
-//color:red;
-  }
+    border: .2475em solid;
+    border-radius: 50%;
+}
+.e-gear::after
+{
+    top: -.675em;
+    left: -.675em;
 
+    width: .225em;
+    height: .225em;
+
+    border-radius: 50%;
+    box-shadow: 1.0125em .6375em 0 0, 1.0125em 1.3875em 0 0, 1.33725953em .825em 0 0, 1.33725953em 1.2em 0 0, .68774047em .825em 0 0, .68774047em 1.2em 0 0;
 }
 
-*/
+/* -- Test -- */

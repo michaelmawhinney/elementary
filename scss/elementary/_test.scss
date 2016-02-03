@@ -1,0 +1,13 @@
+/* -- Test -- */
+
+$tw: 1em;
+
+.#{$prefix}-test {
+
+  &::before {
+  }
+
+  &::after {
+  }
+
+}

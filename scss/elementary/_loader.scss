@@ -9,7 +9,7 @@ $loaderwidth: .6em;
   width: .5*$loaderwidth;
   height: .5*$loaderwidth;
   animation-fill-mode: both;
-  animation: #{$prefix}-p 1.5s infinite linear;
+  animation: #{$prefix}-p 1.2s infinite linear;
 }
 
 .#{$prefix}-loader {
@@ -42,20 +42,3 @@ $loaderwidth: .6em;
   }
 
 }
-
-/*
-
-@keyframes #{$prefix}-p {
-  0%,
-  90%,
-  100% {
-    box-shadow: 0 .5*$loaderwidth 0 0;
-  }
-  45% {
-    box-shadow: 0 .5*$loaderwidth 0 -.175*$loaderwidth;
-  }
-
-}
-
-*/
-

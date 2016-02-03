@@ -1,37 +1,38 @@
 /* -- Gear -- */
 
-$gearwidth: 1em;
-
-.#{$prefix}-gear {
-  &::before {
-  }
-}
-
-
-
-
-
-
-
-/*
+$gw: .9em;
+$mx: (1-$gw)/2;
 
 
 .#{$prefix}-gear {
-
-  width: $gearwidth;
-  height: $gearwidth;
+  height: $gw;
+  width: $gw;
   border-radius: 50%;
-  border: $gearwidth/3.2 solid;
+  overflow: hidden;
+  margin-left: $mx;
+  margin-right: $mx;
 
   &::before {
-    width: $gearwidth;
-    height: $gearwidth;
-border-style: solid;
-border-width:1px 0;
-border-radius:50%;
-//color:red;
+    height: 19/24*$gw;
+    width: 19/24*$gw;
+    border: 11/40*$gw solid;
+    border-radius: 50%;
+    left: 5/48*$gw;
+    top: 5/48*$gw;
+  }
+
+  &::after {
+    height: 1/4*$gw;
+    width: 1/4*$gw;
+    border-radius: 50%;
+    left: -3/4*$gw;
+    top: -3/4*$gw;
+    box-shadow: 9/8*$gw 17/24*$gw 0 0,
+                9/8*$gw 37/24*$gw 0 0,
+                (9/8+5/12*$SIN60)*$gw (9/8-5/12*$SIN30)*$gw 0 0,
+                (9/8+5/12*$SIN60)*$gw (9/8+5/12*$SIN30)*$gw 0 0,
+                (9/8-5/12*$SIN60)*$gw (9/8-5/12*$SIN30)*$gw 0 0,
+                (9/8-5/12*$SIN60)*$gw (9/8+5/12*$SIN30)*$gw 0 0;
   }
 
 }
-
-*/

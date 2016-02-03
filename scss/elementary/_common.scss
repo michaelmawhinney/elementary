@@ -1,8 +1,13 @@
 /* -- Required for all icons -- */
 
+@import "constants";
 @import "functions";
 
+/* -- Variables -- */
+
 $prefix: e;
+
+/* -- Common Definitions --*/
 
 [class*="#{$prefix}-"] {
   box-sizing: border-box;
@@ -22,6 +27,7 @@ $prefix: e;
   left: 0;
 }
 
+/* --  Debugging -- */
 
 /*
 [class*="#{$prefix}-"] {
