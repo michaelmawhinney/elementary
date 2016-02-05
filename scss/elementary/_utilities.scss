@@ -1,0 +1,20 @@
+// Utility Classes
+
+
+// Rotation
+
+$angles: ( 45, 90, 135, 180, 225, 270, 315 );
+
+@each $angle in $angles {
+  .#{$prefix}-r#{$angle} { transform: rotate(#{$angle}deg); }
+}
+
+// Size
+
+$sizes: ( 2, 3, 4, 5 );
+
+@each $size in $sizes {
+  .#{$prefix}-s#{$size} { font-size: #{$size}em; }
+}
+
+
