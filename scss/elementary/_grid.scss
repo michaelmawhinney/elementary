@@ -1,0 +1,23 @@
+/* -- Grid -- */
+
+$unit: 1em;
+$masterwidth: 1;
+$width: $masterwidth/4;
+$gutter: $masterwidth/8;
+
+.#{$prefix}-grid:after {
+  height: $width*$unit;
+  width: $width*$unit;
+  top: -1*$masterwidth*$unit;
+  box-shadow: 0 $masterwidth*$unit 0,
+              ($width+$gutter)*$unit $masterwidth*$unit 0,
+              2*($width+$gutter)*$unit $masterwidth*$unit 0,
+              0 ($masterwidth+$width+$gutter)*$unit 0,
+              ($width+$gutter)*$unit ($masterwidth+$width+$gutter)*$unit 0,
+              2*($width+$gutter)*$unit ($masterwidth+$width+$gutter)*$unit 0,
+              0 ($masterwidth+2*($width+$gutter))*$unit 0,
+              ($width+$gutter)*$unit ($masterwidth+2*($width+$gutter))*$unit 0,
+              2*($width+$gutter)*$unit ($masterwidth+2*($width+$gutter))*$unit 0;
+  border-radius: 10%;
+}
+
