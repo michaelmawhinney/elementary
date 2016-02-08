@@ -1,7 +1,4 @@
 /*! elementary v0.0.0-alpha | git.io/elementary */
-/* -- Required for all icons -- */
-/* -- CONSTANTS -- */
-/* -- Variables -- */
 /* -- Common Definitions --*/
 [class*='e-']
 {
@@ -28,21 +25,6 @@
     content: '';
 }
 
-/* --  Debugging -- */
-/*
-[class*="e-"] {
-background-color: red;
-border: 1px solid red;
-}
-[class*="e-"]::before{
-background-color: green;
-border: 1px solid green;
-}
-[class*="e-"]::after {
-background-color: yellow;
-border: 1px solid yellow;
-}
-*/
 .e-r45
 {
     transform: rotate(45deg);

@@ -1,9 +1,9 @@
-/* -- Required for all icons -- */
+// Required for all icons
 
 @import "constants";
 @import "functions";
 
-/* -- Variables -- */
+// Variables
 
 $prefix: e;
 
@@ -26,20 +26,3 @@ $prefix: e;
   top: 0;
   left: 0;
 }
-
-/* --  Debugging -- */
-
-/*
-[class*="#{$prefix}-"] {
-background-color: red;
-border: 1px solid red;
-}
-[class*="#{$prefix}-"]::before{
-background-color: green;
-border: 1px solid green;
-}
-[class*="#{$prefix}-"]::after {
-background-color: yellow;
-border: 1px solid yellow;
-}
-*/
