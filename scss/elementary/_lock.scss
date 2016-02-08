@@ -1,25 +1,26 @@
 /* -- Lock -- */
 
-$lw: 1.3em;
+$lu: 1em; // units
+$lw: 1; // master width
+$lw1: .8; // padlock width
+$lw2: .55; // bar height
 
-.#{$prefix}-lock {
+.#{$prefix}-lock::before {
+  width: $lw1 * $lw * $lu;
+  height:  $lw1 * .7 * $lw * $lu;
+  box-shadow: inset 0 0 0 9*$lw*$lu;
+  border-radius: .06*$lw*$lu;
+  top:auto;
+  bottom:0;
+  left:50%;
+  margin-left: -$lw1/2*$lw*$lu;
+}
 
-  width: .65*$lw;
-  height: .43*$lw;
-  box-shadow: inset 0 0 0 2*$lw;
-  border-radius: .06*$lw;
-  position: relative;
-  top: .2*$lw;
-
-  &::before {
-    height: .6*$lw;
-    width: .48*$lw;
-    border-radius: .3*$lw;
-    border: .1*$lw solid;
-    position: absolute;
-    top:-.35*$lw;
+.#{$prefix}-lock::after {
+    width: $lw2*$lw*$lu;
+    height: 2*($lw - $lw / $PHI )*$lu;
+    border-radius: .3*$lw*$lu;
+    border: .15*$lw*$lu solid;
     left:50%;
-    margin-left: -.24*$lw;
-  }
-
+    margin-left: -$lw2/2*$lw*$lu;
 }
