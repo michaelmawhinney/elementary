@@ -281,23 +281,23 @@ border: 1px solid yellow;
 }
 
 /* -- Times -- */
-.e-times,
+.e-times::before,
 .e-times::after
 {
-    width: .9em;
-    height: .24em;
+    top: .4em;
+    left: 0;
 
-    box-shadow: inset 0 0 0 1em;
-}
+    width: 1em;
+    height: .2em;
 
-.e-times
-{
-    transform: rotate(45deg);
+    transform: rotate(45deg); 
+
+    box-shadow: inset 0 0 0 9em;
 }
 
 .e-times::after
 {
-    transform: rotate(90deg);
+    transform: rotate(-45deg);
 }
 
 /* -- Gear -- */
