@@ -16,7 +16,7 @@ var cssmin        = require('gulp-cssmin');
 
 gulp.task('sass', function(){
   return gulp.src('scss/elementary.scss')
-    .pipe(sass({precision:8}))
+    .pipe(sass({precision:3}))
     .pipe(autoprefixer({
       browsers: ['last 2 firefox versions','last 2 chrome versions']
     }))
