@@ -1,23 +1,32 @@
-/* -- Search -- */
+/*-- Search --*/
+
+$m: 1;
+$w: .8;
+$t: .15;
+$i: $w -  (2*$t);
+$ix: $SQRT2 * $i / 2;
+$h: $SQRT2*$m - $w/2 - $w*$SQRT2/2;
+$x: $h/2 - $t/2;
+$z: ($m - $w)/2;
 
 .#{$prefix}-search {
 
-  width: .8em;
-  height: .8em;
-  position: relative;
-  top:-.1em;
-  border: .15em solid;
+  width: $w*$m*1em;
+  height: $w*$m*1em;
+  border: $t*$m*1em solid;
   border-radius: 50%;
+  top: -($m - $w - $t/2)*1em;
+  margin-right: ($m - $w)*1em;
+  margin-bottom: ($m - $w)*1em;
 
-  &::before {
-    width: .15em;
-    height: .5em;
-    position: absolute;
-    box-shadow: 0 0 0 2em inset;
-    border-radius: 0 0 .075em .075em;
+  &::after {
+    width: $t*$m*1em;
+    height: $h*$m*1em;
+    box-shadow: 0 0 0 9*$m*1em inset;
+    border-radius: 0 0 ($t/2)*$m*1em ($t/2)*$m*1em;
     transform: rotate(-45deg);
-    top: .4em;
-    left: .55em;
+    top: ($ix + ($SQRT2/2.5*$t)) * $m*1em;
+    left: ($ix + ($SQRT2/2.5*$t) + $x) * $m*1em;
   }
 
 }
