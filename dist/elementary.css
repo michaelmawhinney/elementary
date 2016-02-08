@@ -240,4 +240,11 @@
   box-shadow: 1.0125em .6375em 0 0, 1.0125em 1.3875em 0 0, 1.33725953em .825em 0 0, 1.33725953em 1.2em 0 0, .68774047em .825em 0 0, .68774047em 1.2em 0 0;
 }
 
-/* -- Test -- */
+/* -- Grid -- */
+.e-grid:after {
+  height: .25em;
+  width: .25em;
+  top: -1em;
+  box-shadow: 0 1em 0, .375em 1em 0, .75em 1em 0, 0 1.375em 0, .375em 1.375em 0, .75em 1.375em 0, 0 1.75em 0, .375em 1.75em 0, .75em 1.75em 0;
+  border-radius: 10%;
+}
