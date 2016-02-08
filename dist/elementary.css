@@ -2,6 +2,8 @@
 /* -- Common Definitions --*/
 [class*='e-']
 {
+    line-height: 1;
+
     position: relative;
 
     display: inline-block;
