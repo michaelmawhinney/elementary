@@ -187,31 +187,31 @@ border: 1px solid yellow;
     border-radius: .05em;
 }
 
-/* -- Search -- */
+/*-- Search --*/
 .e-search
 {
-    position: relative;
-    top: -.1em;
+    top: -.125em;
 
     width: .8em;
     height: .8em;
+    margin-right: .2em;
+    margin-bottom: .2em; 
 
     border: .15em solid;
     border-radius: 50%;
 }
-.e-search::before
+.e-search::after
 {
-    position: absolute;
-    top: .4em;
-    left: .55em; 
+    top: .4384062em;
+    left: .58767027em; 
 
     width: .15em;
-    height: .5em;
+    height: .44852814em;
 
     transform: rotate(-45deg);
 
     border-radius: 0 0 .075em .075em;
-    box-shadow: 0 0 0 2em inset;
+    box-shadow: 0 0 0 9em inset;
 }
 
 /* -- Loader -- */
