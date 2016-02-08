@@ -19,47 +19,41 @@
   left: 0;
 }
 
-.e-r45 {
+/* -- Rotation classes -- */
+.e-45 {
   transform: rotate(45deg);
 }
 
-.e-r90 {
+.e-90 {
   transform: rotate(90deg);
 }
 
-.e-r135 {
-  transform: rotate(135deg);
-}
-
-.e-r180 {
+.e-180 {
   transform: rotate(180deg);
 }
 
-.e-r225 {
-  transform: rotate(225deg);
-}
-
-.e-r270 {
+.e-270 {
   transform: rotate(270deg);
 }
 
-.e-r315 {
-  transform: rotate(315deg);
+/* -- Size classes -- */
+.e-lg {
+  font-size: 1.33333333em;
 }
 
-.e-s2 {
+.e-2x {
   font-size: 2em;
 }
 
-.e-s3 {
+.e-3x {
   font-size: 3em;
 }
 
-.e-s4 {
+.e-4x {
   font-size: 4em;
 }
 
-.e-s5 {
+.e-5x {
   font-size: 5em;
 }
 
