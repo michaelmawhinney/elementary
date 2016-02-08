@@ -1,24 +1,25 @@
 /* -- Mail -- */
 
 $mw: 1em;
+$mt: .1;
 
 .#{$prefix}-mail {
 
   width: $mw;
-  height: 0.75*$mw;
+  height: .75 * $mw;
   overflow: hidden;
   border-radius: .05*$mw;
-  border: .1*$mw solid;
+  border: $mt*$mw solid;
   position: relative;
   top: -.05*$mw;
 
   &::before {
-    border: .1*$mw solid;
+    border: $mt/$SIN75*$mw solid;
     position: absolute;
     width: (13/16)*$mw ;
     height: (13/16)*$mw ;
     transform: rotate(45deg) skew( -15deg, -15deg);
-   top:-.36*$mw;
+    top:-.36*$mw;
     border-radius: .05*$mw;
   }
 
