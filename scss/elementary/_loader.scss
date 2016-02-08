@@ -3,7 +3,7 @@
 $lu: 1em; // unit
 $lw: 1; // master width
 $ld: $lw/3; // circle diameter
-
+$la: 1.1s; // animation length
 
 .#{$prefix}-loader::before,
 .#{$prefix}-loader::after,
@@ -11,28 +11,28 @@ $ld: $lw/3; // circle diameter
   border-radius: 50%;
   width: $ld*$lu;
   height: $ld*$lu;
+  box-shadow: 0 $ld*$lu 0 -1/3*$ld*$lu;
   transform: translatez(0); // try to force browser to use GPU for rendering
   animation: #{$prefix}-p 1.1s infinite linear;
 }
 
 .#{$prefix}-loader {
-  top: -1.25*$ld*$lu;
-//  margin-bottom: 2*$ld*$lu;
-  animation-delay: -0.175s;
+  top: -.4*$ld*$lu;
+  margin: 0 $ld*$lu 2*$ld*$lu;
+  animation-delay: .16*$la;
 }
 
 .#{$prefix}-loader::before {
   left: -1*$ld*$lu;
-  animation-delay: -0.35s;
 }
 
 .#{$prefix}-loader::after {
   left: $ld*$lu;
+  animation-delay: .32*$la;
 }
 
 
 @keyframes #{$prefix}-p {
-  0%,
   20%,
   80%,
   100% {
