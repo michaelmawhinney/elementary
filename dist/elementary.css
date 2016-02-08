@@ -131,24 +131,24 @@
   border-radius: .05em;
 }
 
-/* -- Search -- */
+/*-- Search --*/
 .e-search {
   width: .8em;
   height: .8em;
-  position: relative;
-  top: -.1em;
   border: .15em solid;
   border-radius: 50%;
+  top: -.125em;
+  margin-right: .2em;
+  margin-bottom: .2em;
 }
-.e-search::before {
+.e-search::after {
   width: .15em;
-  height: .5em;
-  position: absolute;
-  box-shadow: 0 0 0 2em inset;
+  height: .44852814em;
+  box-shadow: 0 0 0 9em inset;
   border-radius: 0 0 .075em .075em;
   transform: rotate(-45deg);
-  top: .4em;
-  left: .55em;
+  top: .4384062em;
+  left: .58767027em;
 }
 
 /* -- Loader -- */
@@ -240,4 +240,11 @@
   box-shadow: 1.0125em .6375em 0 0, 1.0125em 1.3875em 0 0, 1.33725953em .825em 0 0, 1.33725953em 1.2em 0 0, .68774047em .825em 0 0, .68774047em 1.2em 0 0;
 }
 
-/* -- Test -- */
+/* -- Grid -- */
+.e-grid:after {
+  height: .25em;
+  width: .25em;
+  top: -1em;
+  box-shadow: 0 1em 0, .375em 1em 0, .75em 1em 0, 0 1.375em 0, .375em 1.375em 0, .75em 1.375em 0, 0 1.75em 0, .375em 1.75em 0, .75em 1.75em 0;
+  border-radius: 10%;
+}
