@@ -184,13 +184,14 @@
 }
 
 /* -- Check -- */
-.e-check {
-  width: .9em;
-  height: .6em;
-  border-width: 0 0 .24em .24em;
+.e-check::after {
+  width: .849em;
+  height: .566em;
+  border-width: 0 0 .2em .2em;
   border-style: solid;
   transform: rotate(-45deg) perspective(9em);
-  top: -.12em;
+  top: .088em;
+  left: .076em;
 }
 
 /* -- Times -- */
