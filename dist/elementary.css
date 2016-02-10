@@ -261,3 +261,17 @@
   transform: rotate(-45deg);
   transform-origin: 0 100%;
 }
+
+/* -- Star -- */
+.e-star::before {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: red;
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 70px  solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg) perspective(9em);
+}
