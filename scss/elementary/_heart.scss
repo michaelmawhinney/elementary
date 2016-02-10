@@ -1,0 +1,22 @@
+/* -- Heart -- */
+
+$hu: 1em; // unit
+$hw: 1; // master width
+
+.#{$prefix}-heart::before,
+.#{$prefix}-heart::after {
+  width: $hw*$hu/2;
+  height: .8*$hw*$hu;
+  top: .1*$hw*$hu;
+  border-radius: $hw*$hu/4 $hw*$hu/4 0 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+  box-shadow: 0 0 0 9*$hw*$hu inset;
+}
+
+.#{$prefix}-heart::after {
+  left: $hw*$hu/2;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+    

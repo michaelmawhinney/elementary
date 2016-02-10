@@ -243,3 +243,21 @@
   box-shadow: 0 1em 0, .375em 1em 0, .75em 1em 0, 0 1.375em 0, .375em 1.375em 0, .75em 1.375em 0, 0 1.75em 0, .375em 1.75em 0, .75em 1.75em 0;
   border-radius: 10%;
 }
+
+/* -- Heart -- */
+.e-heart::before,
+.e-heart::after {
+  width: .5em;
+  height: .8em;
+  top: .1em;
+  border-radius: .25em .25em 0 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+  box-shadow: 0 0 0 9em inset;
+}
+
+.e-heart::after {
+  left: .5em;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
