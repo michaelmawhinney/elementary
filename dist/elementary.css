@@ -260,6 +260,7 @@
   left: .5em;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
+<<<<<<< HEAD
 }
 
 /* -- Star -- */
@@ -290,4 +291,6 @@
   transform-origin: 50% 45%;
   top: -.363em;
   left: -.5em;
+=======
+>>>>>>> parent of 042d7fe... initial commit for star icon branch
 }
