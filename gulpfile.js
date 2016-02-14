@@ -13,6 +13,7 @@ var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
 var csscomb       = require('gulp-csscomb');  
 var cssmin        = require('gulp-cssmin');
+var csslint       = require('gulp-csslint');
 
 gulp.task('sass', function(){
   return gulp.src('scss/elementary.scss')
@@ -24,7 +25,16 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('cssmin', function(){
+gulp.task('lint', function(){
+  return gulp.src('dist/elementary.css')
+    .pipe(csslint({
+      'box-model': false,
+      'box-sizing': false
+    }))
+    .pipe(csslint.reporter());
+});
+
+gulp.task('min', function(){
   return gulp.src('dist/elementary.css')
     .pipe(cssmin())
     .pipe(rename({
@@ -46,6 +56,6 @@ gulp.task('default',function(callback){
 });
 
 gulp.task('css',function(callback){
-  runsequence('clean','sass','cssmin',callback);
+  runsequence('clean','sass','lint','min',callback);
 });
 
