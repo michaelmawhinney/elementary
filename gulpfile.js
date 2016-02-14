@@ -13,6 +13,7 @@ var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
 var csscomb       = require('gulp-csscomb');  
 var cssmin        = require('gulp-cssmin');
+//var csslint       = require('gulp-csslint');
 
 gulp.task('sass', function(){
   return gulp.src('scss/elementary.scss')
@@ -24,7 +25,14 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('cssmin', function(){
+//gulp.task('lint', function(){
+//  return gulp.src('dist/elementary.css')
+//    .pipe(csslint())
+//    .pipe(csslint.reporter()) // Display errors 
+//    .pipe(csslint.reporter('fail'))
+//});
+
+gulp.task('min', function(){
   return gulp.src('dist/elementary.css')
     .pipe(cssmin())
     .pipe(rename({
@@ -45,7 +53,11 @@ gulp.task('default',function(callback){
   runsequence('css',callback);
 });
 
+//gulp.task('css',function(callback){
+//  runsequence('clean','sass','lint','min',callback);
+//});
+
 gulp.task('css',function(callback){
-  runsequence('clean','sass','cssmin',callback);
+  runsequence('clean','sass','min',callback);
 });
 

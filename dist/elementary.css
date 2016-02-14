@@ -263,15 +263,31 @@
 }
 
 /* -- Star -- */
+.e-star {
+  background: white;
+  border-right: .5em solid transparent;
+  border-top: .363em solid;
+  color: green;
+  border-left: .5em solid transparent;
+  top: 1em;
+}
+
+.e-star::after {
+  border-right: .5em solid transparent;
+  border-top: .363em solid;
+  border-left: .5em solid transparent;
+  transform: rotate(72deg) perspective(9em);
+  top: -.363em;
+  left: -.5em;
+  transform-origin: 50% 45%;
+}
+
 .e-star::before {
-  margin: 50px 0;
-  position: relative;
-  display: block;
-  color: red;
-  width: 0;
-  height: 0;
-  border-right: 100px solid transparent;
-  border-bottom: 70px  solid red;
-  border-left: 100px solid transparent;
-  transform: rotate(35deg) perspective(9em);
+  border-right: .5em solid transparent;
+  border-top: .363em solid;
+  border-left: .5em solid transparent;
+  transform: rotate(-72deg) perspective(9em);
+  transform-origin: 50% 45%;
+  top: -.363em;
+  left: -.5em;
 }
