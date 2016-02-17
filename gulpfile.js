@@ -8,12 +8,20 @@ var runsequence   = require('run-sequence');
 var del           = require('del');
 var rename        = require('gulp-rename');
 
+// scss
+var scsslint      = require('gulp-scss-lint');
+
 // css
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
 var csscomb       = require('gulp-csscomb');  
 var cssmin        = require('gulp-cssmin');
 var csslint       = require('gulp-csslint');
+
+gulp.task('lint-sass', function() {
+  return gulp.src('scss/*.scss')
+    .pipe(scsslint());
+});
 
 gulp.task('sass', function(){
   return gulp.src('scss/elementary.scss')
@@ -25,7 +33,7 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('lint', function(){
+gulp.task('lint-css', function(){
   return gulp.src('dist/elementary.css')
     .pipe(csslint({
       'box-model': false,
@@ -34,7 +42,7 @@ gulp.task('lint', function(){
     .pipe(csslint.reporter());
 });
 
-gulp.task('min', function(){
+gulp.task('cssmin', function(){
   return gulp.src('dist/elementary.css')
     .pipe(cssmin())
     .pipe(rename({
@@ -56,6 +64,6 @@ gulp.task('default',function(callback){
 });
 
 gulp.task('css',function(callback){
-  runsequence('clean','sass','lint','min',callback);
+  runsequence('clean','sass','lint-css','cssmin',callback);
 });
 
