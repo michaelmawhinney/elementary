@@ -7,9 +7,11 @@ var gulp          = require('gulp');
 var runsequence   = require('run-sequence');
 var del           = require('del');
 var rename        = require('gulp-rename');
+var fs            = require('fs');
 
 // scss
 var scsslint      = require('gulp-scss-lint');
+var header        = require('gulp-header');
 
 // css
 var sass          = require('gulp-sass');
@@ -51,6 +53,15 @@ gulp.task('cssmin', function(){
     .pipe(gulp.dest('dist'))
 });
 
+gulp.task('banner', function(){
+  gulp.src('dist/elementary.css')
+    .pipe(header(fs.readFileSync('banner.txt','utf8'),{}))
+    .pipe(gulp.dest('dist'));
+  gulp.src('dist/elementary.min.css')
+    .pipe(header(fs.readFileSync('banner.txt','utf8'),{}))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('clean', function () {  
   return del(['dist']);
 });
@@ -64,6 +75,6 @@ gulp.task('default',function(callback){
 });
 
 gulp.task('css',function(callback){
-  runsequence('clean','sass','lint-css','cssmin',callback);
+  runsequence('clean','sass','lint-css','cssmin','banner',callback);
 });
 
