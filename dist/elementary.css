@@ -1,6 +1,6 @@
 /*! elementary v0.0.0-alpha | git.io/elementary */
 /* -- Common Definitions --*/
-[class*="e-"] {
+[class^="e-"] {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -10,8 +10,8 @@
   height: 1em;
 }
 
-[class*="e-"]::before,
-[class*="e-"]::after {
+[class^="e-"]::before,
+[class^="e-"]::after {
   box-sizing: border-box;
   content: "";
   position: absolute;
