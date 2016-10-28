@@ -69,12 +69,7 @@
       color: black;
       background: rgba(255,255,255,.5);
     }
-    .title > img {
-      width: 1em;
-      margin-right: .2em;
-      position: relative;
-      top: .25em;
-    }
+
   </style>
 </head>
 <body>
@@ -92,39 +87,46 @@
 -->
   <div class="subtitle"><b>usage:</b> <span class="mono">&lt;span class="e-<b>iconName</b>"&gt;&lt;/span&gt;</span></div>
   <div class="row">
-    <div class="icon" id="s"><span class="e-search"></span><small>e-search</small></div>
-    <div class="icon"><span class="e-mail"></span><small>e-mail</small></div>
+    <div class="icon"><span class="e-search"></span></div>
+    <div class="icon"><span class="e-mail"></span></div>
     </div>
   <div class="row">
-    <div class="icon"><span class="e-lock"></span><small>e-lock</small></div>
-    <div class="icon"><span class="e-bars"></span><small>e-bars</small></div>
+    <div class="icon"><span class="e-lock"></span></div>
+    <div class="icon"><span class="e-bars"></span></div>
   </div>
   <div class="row">
-    <div class="icon"><span class="e-home"></span><small>e-home</small></div>
-    <div class="icon"><span class="e-loader"></span><small>e-loader</small></div>
+    <div class="icon"><span class="e-home"></span></div>
+    <div class="icon"><span class="e-loader"></span></div>
   </div>
   <div class="row">
-    <div class="icon"><span class="e-check"></span><small>e-check</small></div>
-    <div class="icon"><span class="e-times"></span><small>e-times</small></div>
+    <div class="icon"><span class="e-check"></span></div>
+    <div class="icon"><span class="e-times"></span></div>
   </div>
   <div class="row">
-    <div class="icon"><span class="e-gear"></span><small>e-gear</small></div>
-    <div class="icon"><span class="e-"></span><small>e-grid</small></div>
+    <div class="icon"><span class="e-gear"></span></div>
+    <div class="icon"><span class="e-grid"></span></div>
   </div>
   <div class="row">
-    <div class="icon"><span class="e-test"></span><small>e-heart</small></div>
+    <div class="icon"><span class="e-heart"></span></div>
+    <div class="icon"><span class="e-test"></span></div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
   <script>
     $('document').ready(function(){
       function updateSize(){
-        $('#res').text( $('#s').css("font-size") );
+        $('#res').text( $('.icon > span:first-child').css("font-size") );
       };
-      $(document).ready(updateSize);
+      updateSize();
       $(window).resize(updateSize);
+      $('.icon > span').each(function(){
+        $(this).after( "<small>" + $(this).attr("class") + "</span>" );
+      });
     });
   </script>
 
 </body>
 </html>
+
+ 
+
