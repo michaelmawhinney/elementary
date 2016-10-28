@@ -9,7 +9,7 @@ $prefix: e;
 
 /* -- Common Definitions --*/
 
-[class*="#{$prefix}-"] {
+[class^="#{$prefix}-"] {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -19,8 +19,8 @@ $prefix: e;
   height: 1em;
 }
 
-[class*="#{$prefix}-"]::before,
-[class*="#{$prefix}-"]::after {
+[class^="#{$prefix}-"]::before,
+[class^="#{$prefix}-"]::after {
   box-sizing: border-box;
   content: "";
   position: absolute;
