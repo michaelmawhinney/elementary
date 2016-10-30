@@ -5,7 +5,7 @@ $lw: 1; // master width
 $lw1: .8; // padlock width
 $lw2: .55; // bar height
 
-.#{$prefix}-lock::before {
+#{$container}.#{$prefix}-lock::before {
   width: $lw1 * $lw * $lu;
   height:  $lw1 * .7 * $lw * $lu;
   box-shadow: inset 0 0 0 9*$lw*$lu;
@@ -16,7 +16,7 @@ $lw2: .55; // bar height
   margin-left: -$lw1/2*$lw*$lu;
 }
 
-.#{$prefix}-lock::after {
+#{$container}.#{$prefix}-lock::after {
     width: $lw2*$lw*$lu;
     height: 2*($lw - $lw / $PHI )*$lu;
     border-radius: .3*$lw*$lu;
