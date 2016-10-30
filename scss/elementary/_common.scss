@@ -6,10 +6,11 @@
 // Variables
 
 $prefix: e;
+$container: span;
 
 /* -- Common Definitions --*/
 
-[class^="#{$prefix}-"] {
+#{$container}[class^="#{$prefix}-"] {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -19,8 +20,8 @@ $prefix: e;
   height: 1em;
 }
 
-[class^="#{$prefix}-"]::before,
-[class^="#{$prefix}-"]::after {
+#{$container}[class^="#{$prefix}-"]::before,
+#{$container}[class^="#{$prefix}-"]::after {
   box-sizing: border-box;
   content: "";
   position: absolute;
