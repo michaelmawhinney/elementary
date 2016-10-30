@@ -4,7 +4,7 @@ $bw: 1em; // width
 $bh: $bw/(5*$PHI); // thickness
 $by: 2*$bh; // y-position
 
-.#{$prefix}-bars {
+#{$container}.#{$prefix}-bars {
 
   width: $bw;
   height: $bh;

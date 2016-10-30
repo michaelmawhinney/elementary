@@ -3,7 +3,7 @@
 $mw: 1em;
 $mt: .1;
 
-.#{$prefix}-mail {
+#{$container}.#{$prefix}-mail {
 
   width: $mw;
   height: .75 * $mw;

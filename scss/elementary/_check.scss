@@ -10,7 +10,7 @@ $thickness: 0.23570226039551584146694812070162*$width;
 
 $yoffset: -1 * ($SQRT2/2)*($width - $masterwidth*$SQRT2 + $height)/2 - $masterwidth/2 + $SQRT2/4*($width + $thickness);
 
-.#{$prefix}-check::after {
+#{$container}.#{$prefix}-check::after {
   width: $width*$unit;
   height: $height*$unit;
   border-width: 0 0 $thickness*$unit $thickness*$unit;

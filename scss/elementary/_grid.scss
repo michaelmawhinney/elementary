@@ -5,7 +5,7 @@ $masterwidth: 1;
 $width: $masterwidth/4;
 $gutter: $masterwidth/8;
 
-.#{$prefix}-grid:after {
+#{$container}.#{$prefix}-grid:after {
   height: $width*$unit;
   width: $width*$unit;
   top: -1*$masterwidth*$unit;
