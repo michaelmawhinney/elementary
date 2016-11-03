@@ -9,7 +9,17 @@ $prefix: e;
 
 /* -- Common Definitions --*/
 
-[class^="#{$prefix}-"] {
+.#{$prefix}-bars,
+.#{$prefix}-home,
+.#{$prefix}-lock,
+.#{$prefix}-mail,
+.#{$prefix}-search,
+.#{$prefix}-loader,
+.#{$prefix}-check,
+.#{$prefix}-times,
+.#{$prefix}-gear,
+.#{$prefix}-grid,
+.#{$prefix}-heart {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -19,8 +29,17 @@ $prefix: e;
   height: 1em;
 }
 
-[class^="#{$prefix}-"]::before,
-[class^="#{$prefix}-"]::after {
+.#{$prefix}-bars::before,   .#{$prefix}-bars::after,
+.#{$prefix}-home::before,   .#{$prefix}-home::after,
+.#{$prefix}-lock::before,   .#{$prefix}-lock::after,
+.#{$prefix}-mail::before,   .#{$prefix}-mail::after,
+.#{$prefix}-search::before, .#{$prefix}-search::after,
+.#{$prefix}-loader::before, .#{$prefix}-loader::after,
+.#{$prefix}-check::before,  .#{$prefix}-check::after,
+.#{$prefix}-times::before,  .#{$prefix}-times::after,
+.#{$prefix}-gear::before,   .#{$prefix}-gear::after,
+.#{$prefix}-grid::before,   .#{$prefix}-grid::after,
+.#{$prefix}-heart::before,  .#{$prefix}-heart::after {
   box-sizing: border-box;
   content: "";
   position: absolute;
