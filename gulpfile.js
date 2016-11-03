@@ -74,7 +74,10 @@ gulp.task('default',function(callback){
   runsequence('css',callback);
 });
 
+//gulp.task('css',function(callback){
+//  runsequence('clean','sass','lint','min',callback);
+//});
+
 gulp.task('css',function(callback){
   runsequence('clean','sass','lint-css','cssmin','banner',callback);
 });
-

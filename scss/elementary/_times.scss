@@ -5,8 +5,8 @@ $tw: 1; // master icon width
 $tl: 1; // length
 $tt: .2; // thickness
 
-#{$container}.#{$prefix}-times::before,
-#{$container}.#{$prefix}-times::after {
+.#{$prefix}-times::before,
+.#{$prefix}-times::after {
   width: $tl * $tw * $tu;
   height: $tt * $tw * $tu;
   box-shadow: inset 0 0 0 9*$tw*$tu;
@@ -15,4 +15,4 @@ $tt: .2; // thickness
   transform: rotate(45deg);
 }
 
-#{$container}.#{$prefix}-times::after { transform: rotate(-45deg); } 
+.#{$prefix}-times::after { transform: rotate(-45deg); } 

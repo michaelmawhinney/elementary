@@ -5,9 +5,9 @@ $lw: 1; // master width
 $ld: $lw/3; // circle diameter
 $la: 1.1s; // animation length
 
-#{$container}.#{$prefix}-loader::before,
-#{$container}.#{$prefix}-loader::after,
-#{$container}.#{$prefix}-loader {
+.#{$prefix}-loader::before,
+.#{$prefix}-loader::after,
+.#{$prefix}-loader {
   border-radius: 50%;
   width: $ld*$lu;
   height: $ld*$lu;
@@ -16,17 +16,17 @@ $la: 1.1s; // animation length
   animation: #{$prefix}-p 1.1s infinite linear;
 }
 
-#{$container}.#{$prefix}-loader {
+.#{$prefix}-loader {
   top: -.4*$ld*$lu;
   margin: 0 $ld*$lu 2*$ld*$lu;
   animation-delay: .16*$la;
 }
 
-#{$container}.#{$prefix}-loader::before {
+.#{$prefix}-loader::before {
   left: -1*$ld*$lu;
 }
 
-#{$container}.#{$prefix}-loader::after {
+.#{$prefix}-loader::after {
   left: $ld*$lu;
   animation-delay: .32*$la;
 }

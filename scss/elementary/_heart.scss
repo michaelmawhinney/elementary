@@ -3,8 +3,8 @@
 $hu: 1em; // unit
 $hw: 1; // master width
 
-#{$container}.#{$prefix}-heart::before,
-#{$container}.#{$prefix}-heart::after {
+.#{$prefix}-heart::before,
+.#{$prefix}-heart::after {
   width: $hw*$hu/2;
   height: .8*$hw*$hu;
   top: .1*$hw*$hu;
@@ -14,7 +14,7 @@ $hw: 1; // master width
   box-shadow: 0 0 0 9*$hw*$hu inset;
 }
 
-#{$container}.#{$prefix}-heart::after {
+.#{$prefix}-heart::after {
   left: $hw*$hu/2;
   transform: rotate(-45deg);
   transform-origin: 0 100%;

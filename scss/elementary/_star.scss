@@ -1,0 +1,41 @@
+/* -- Star -- */
+
+$su: 1em; // unit
+$sw: 1; // master width
+
+.#{$prefix}-star {
+
+  border-right: .5em solid transparent;
+  border-top: .5*$TAN36*1em  solid;
+  border-left: .5em solid transparent;
+  // the pentagram math was complication to express as radicals and PHI
+  // that level of precision is not necessary, so the code just needs decimal values
+  // the value below has been verified to center the star vertically
+  top: ($sw * 0.38774300585510365688951) * $su;
+
+}
+
+.#{$prefix}-star::after {
+
+  border-right: .5em solid transparent;
+  border-top: .5*$TAN36*1em solid;
+  border-left: .5em solid transparent;
+  transform: rotate(72deg) perspective(9em);
+  transform-origin: 50% 45%;
+  top: -.5*$TAN36*1em;
+  left: -.5em ;
+
+}
+
+.#{$prefix}-star::before {
+
+  border-right: .5em solid transparent;
+  border-top: .5*$TAN36*1em solid;
+  border-left: .5em solid transparent;
+  transform: rotate(-72deg) perspective(9em);
+  transform-origin: 50% 45%;
+  top: -.5*$TAN36*1em;
+  left: -.5em;
+
+}
+

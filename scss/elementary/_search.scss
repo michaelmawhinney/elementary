@@ -9,7 +9,7 @@ $h: $SQRT2*$m - $w/2 - $w*$SQRT2/2;
 $x: $h/2 - $t/2;
 $z: ($m - $w)/2;
 
-#{$container}.#{$prefix}-search {
+.#{$prefix}-search {
 
   width: $w*$m*1em;
   height: $w*$m*1em;
