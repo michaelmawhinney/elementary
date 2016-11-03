@@ -3,19 +3,16 @@
 $su: 1em; // unit
 $sw: 1; // master width
 
-
 .#{$prefix}-star {
-
-
-background: white;
 
   border-right: .5em solid transparent;
   border-top: .5*$TAN36*1em  solid;
-color:green;
   border-left: .5em solid transparent;
+  // the pentagram math was complication to express as radicals and PHI
+  // that level of precision is not necessary, so the code just needs decimal values
+  // the value below has been verified to center the star vertically
+  top: ($sw * 0.38774300585510365688951) * $su;
 
-//top: ($sw - $sw*$COS18)/2 * $su;
-top: 1em;
 }
 
 .#{$prefix}-star::after {
@@ -23,13 +20,12 @@ top: 1em;
   border-right: .5em solid transparent;
   border-top: .5*$TAN36*1em solid;
   border-left: .5em solid transparent;
-  
   transform: rotate(72deg) perspective(9em);
-top: -.5*$TAN36*1em;
-left: -.5em ;
-transform-origin: 50% 45%;
-}
+  transform-origin: 50% 45%;
+  top: -.5*$TAN36*1em;
+  left: -.5em ;
 
+}
 
 .#{$prefix}-star::before {
 
@@ -37,9 +33,9 @@ transform-origin: 50% 45%;
   border-top: .5*$TAN36*1em solid;
   border-left: .5em solid transparent;
   transform: rotate(-72deg) perspective(9em);
-transform-origin: 50% 45%;
+  transform-origin: 50% 45%;
+  top: -.5*$TAN36*1em;
+  left: -.5em;
 
-top: -.5*$TAN36*1em;
-left: -.5em;
 }
 

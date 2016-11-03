@@ -4,16 +4,11 @@ $bw: 1em; // width
 $bh: $bw/(5*$PHI); // thickness
 $by: 2*$bh; // y-position
 
-#{$container}.#{$prefix}-bars {
+.#{$prefix}-bars {
 
   width: $bw;
   height: $bh;
   box-shadow: inset 0 0 0 9em, 0 -1*$by, 0 $by;
   border-radius: .04em;
-
-//  width: .8em;
-//  height: .13em;
-//  box-shadow: inset 0 0 0 6em, 0 -.26em, 0 .26em;
-//  border-radius: .03em;
 
 }

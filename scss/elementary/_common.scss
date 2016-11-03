@@ -19,7 +19,8 @@ $prefix: e;
 .#{$prefix}-times,
 .#{$prefix}-gear,
 .#{$prefix}-grid,
-.#{$prefix}-heart {
+.#{$prefix}-heart,
+.#{$prefix}-star {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -39,7 +40,8 @@ $prefix: e;
 .#{$prefix}-times::before,  .#{$prefix}-times::after,
 .#{$prefix}-gear::before,   .#{$prefix}-gear::after,
 .#{$prefix}-grid::before,   .#{$prefix}-grid::after,
-.#{$prefix}-heart::before,  .#{$prefix}-heart::after {
+.#{$prefix}-heart::before,  .#{$prefix}-heart::after,
+.#{$prefix}-star::before,  .#{$prefix}-star::after {
   box-sizing: border-box;
   content: "";
   position: absolute;

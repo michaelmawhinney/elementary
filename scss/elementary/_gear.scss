@@ -4,7 +4,7 @@ $gw: .9em;
 $mx: (1-$gw)/2;
 
 
-#{$container}.#{$prefix}-gear {
+.#{$prefix}-gear {
   height: $gw;
   width: $gw;
   border-radius: 50%;
