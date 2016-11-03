@@ -2,7 +2,7 @@
 
 $tw: 1em;
 
-.#{$prefix}-test {
+#{$container}.#{$prefix}-test {
 
   &::before {
   }
