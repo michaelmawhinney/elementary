@@ -1,6 +1,16 @@
 /*! elementary v0.3.5 | git.io/elementary */
 /* -- Common Definitions --*/
-span[class^="e-"] {
+.e-bars,
+.e-home,
+.e-lock,
+.e-mail,
+.e-search,
+.e-loader,
+.e-check,
+.e-times,
+.e-gear,
+.e-grid,
+.e-heart {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -10,8 +20,28 @@ span[class^="e-"] {
   height: 1em;
 }
 
-span[class^="e-"]::before,
-span[class^="e-"]::after {
+.e-bars::before,
+.e-bars::after,
+.e-home::before,
+.e-home::after,
+.e-lock::before,
+.e-lock::after,
+.e-mail::before,
+.e-mail::after,
+.e-search::before,
+.e-search::after,
+.e-loader::before,
+.e-loader::after,
+.e-check::before,
+.e-check::after,
+.e-times::before,
+.e-times::after,
+.e-gear::before,
+.e-gear::after,
+.e-grid::before,
+.e-grid::after,
+.e-heart::before,
+.e-heart::after {
   box-sizing: border-box;
   content: "";
   position: absolute;
