@@ -182,16 +182,16 @@
 .e-loader::before,
 .e-loader::after,
 .e-loader {
+  border: 1px solid red;
+  background: white;
   border-radius: 50%;
   width: .333em;
   height: .333em;
   box-shadow: 0 .333em 0 -.111em;
-  transform: translatez(0);
   animation: e-p 1.1s infinite linear;
 }
 
 .e-loader {
-  top: -.133em;
   margin: 0 .333em .667em;
   animation-delay: .176s;
 }
