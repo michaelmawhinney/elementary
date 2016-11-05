@@ -1,0 +1,16 @@
+/* -- Arrow -- */
+
+$aw: 1;
+$au: 1em;
+
+.#{$prefix}-arrow {
+
+  &::after {
+    border-right: $aw/2*$au solid transparent;
+    border-top: $TAN60*$aw/2*$au solid;
+    border-left: $aw/2*$au solid transparent;
+    top: ($aw/2 - $SQRT3*$aw/4)*$au;
+    //transform-origin: $aw/2*$au $aw/2*$au;
+  }
+
+}
