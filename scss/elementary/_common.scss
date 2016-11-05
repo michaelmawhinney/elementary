@@ -22,7 +22,8 @@ $prefix: e;
 .#{$prefix}-heart,
 .#{$prefix}-star,
 .#{$prefix}-pencil,
-.#{$prefix}-pen {
+.#{$prefix}-pen,
+.#{$prefix}-arrow {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -45,7 +46,8 @@ $prefix: e;
 .#{$prefix}-heart::before,  .#{$prefix}-heart::after,
 .#{$prefix}-star::before,  .#{$prefix}-star::after,
 .#{$prefix}-pencil::before,  .#{$prefix}-pencil::after,
-.#{$prefix}-pen::before,  .#{$prefix}-pen::after {
+.#{$prefix}-pen::before,  .#{$prefix}-pen::after,
+.#{$prefix}-arrow::before,  .#{$prefix}-arrow::after {
   box-sizing: border-box;
   content: "";
   position: absolute;

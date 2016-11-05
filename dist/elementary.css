@@ -13,7 +13,8 @@
 .e-heart,
 .e-star,
 .e-pencil,
-.e-pen {
+.e-pen,
+.e-arrow {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -50,7 +51,9 @@
 .e-pencil::before,
 .e-pencil::after,
 .e-pen::before,
-.e-pen::after {
+.e-pen::after,
+.e-arrow::before,
+.e-arrow::after {
   box-sizing: border-box;
   content: "";
   position: absolute;
@@ -418,3 +421,11 @@
 
     border-radius: $pw/2*$pu $pw/2*$pu 0 0;
 */
+/* -- Arrow -- */
+.e-arrow::after {
+  border-right: .5em solid transparent;
+  border-top: .866em solid;
+  border-left: .5em solid transparent;
+  top: .067em;
+  transform-origin: .5em .5em;
+}
