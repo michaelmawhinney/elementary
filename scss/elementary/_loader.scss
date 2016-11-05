@@ -16,7 +16,7 @@ $la: 1.1s; // animation length
 }
 
 .#{$prefix}-loader {
-  top: -.4*$ld*$lu;
+  top: -1*$ld*$lu;
   margin: 0 $ld*$lu 2*$ld*$lu;
   animation-delay: .16*$la;
 }
@@ -29,7 +29,6 @@ $la: 1.1s; // animation length
   left: $ld*$lu;
   animation-delay: .32*$la;
 }
-
 
 @keyframes #{$prefix}-p {
   20%,
