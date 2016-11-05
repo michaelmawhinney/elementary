@@ -1,5 +1,41 @@
 /* -- Check -- */
 
+$tu: 1em; // unit
+$tw: 1; // master icon width
+$tl: 1; // length
+$tt: .2; // thickness
+
+.#{$prefix}-check::before {
+  width: $tl * $tw * $tu;
+  height: $tt * $tw * $tu;
+  box-shadow: inset 0 0 0 9*$tw*$tu;
+//  top: ($tw - $tt) / 2 * $tu;
+//  left: ($tw - $tl) / 2 * $tu;
+
+top: .5em;
+left: (($tw - $tw/$SQRT2 )/2 - $tt/2/$SQRT2*$tw)*$tu;
+
+  transform: rotate(-45deg);
+  border-radius: $tw/16*$tu;
+}
+
+
+.#{$prefix}-check::after {
+  width: ($tl/3*$tw + $tt*$tw )*$tu;
+  height: $tt * $tw * $tu;
+  box-shadow: inset 0 0 0 9*$tw*$tu;
+//  top: ($tw - $tt) / 2 * $tu;
+left: ( 0  )*$tu;
+  border-radius: $tw/16*$tu;
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+/*
 $unit: 1em;
 $masterwidth: 1;
 $width: 0.84852813742385702928101323452582; // cos(arctan(1/(2/3))-45)*sqrt($height^2+$width^2)
@@ -19,3 +55,6 @@ $yoffset: -1 * ($SQRT2/2)*($width - $masterwidth*$SQRT2 + $height)/2 - $masterwi
   top: (($masterwidth - $height)/2 + $yoffset)*$unit;
   left: ($masterwidth - $width)/2*$unit;
 }
+*/
+
+

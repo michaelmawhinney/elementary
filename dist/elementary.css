@@ -1,4 +1,3 @@
-/*! elementary v0.3.6 | git.io/elementary */
 /* -- Common Definitions --*/
 .e-bars,
 .e-home,
@@ -241,16 +240,46 @@
 }
 
 /* -- Check -- */
-.e-check::after {
-  width: .849em;
-  height: .566em;
-  border-width: 0 0 .2em .2em;
-  border-style: solid;
-  transform: rotate(-45deg) perspective(9em);
-  top: .088em;
+.e-check::before {
+  width: 1em;
+  height: .2em;
+  box-shadow: inset 0 0 0 9em;
+  top: .5em;
   left: .076em;
+  transform: rotate(-45deg);
+  border-radius: .062em;
 }
 
+.e-check::after {
+  width: .533em;
+  height: .2em;
+  box-shadow: inset 0 0 0 9em;
+  left: 0;
+  border-radius: .062em;
+  transform: rotate(45deg);
+}
+
+/*
+$unit: 1em;
+$masterwidth: 1;
+$width: 0.84852813742385702928101323452582; // cos(arctan(1/(2/3))-45)*sqrt($height^2+$width^2)
+$height: 2/3*$width;
+
+// this puts us at .2em, to match that of the Times icon
+$thickness: 0.23570226039551584146694812070162*$width;
+
+$yoffset: -1 * ($SQRT2/2)*($width - $masterwidth*$SQRT2 + $height)/2 - $masterwidth/2 + $SQRT2/4*($width + $thickness);
+
+.e-check::after {
+  width: $width*$unit;
+  height: $height*$unit;
+  border-width: 0 0 $thickness*$unit $thickness*$unit;
+  border-style: solid;
+  transform: rotate(-45deg) perspective(9*$unit);
+  top: (($masterwidth - $height)/2 + $yoffset)*$unit;
+  left: ($masterwidth - $width)/2*$unit;
+}
+*/
 /* -- Times -- */
 .e-times::before,
 .e-times::after {
@@ -260,6 +289,7 @@
   top: .4em;
   left: 0;
   transform: rotate(45deg);
+  border-radius: .062em;
 }
 
 .e-times::after {
@@ -427,5 +457,4 @@
   border-top: .866em solid;
   border-left: .5em solid transparent;
   top: .067em;
-  transform-origin: .5em .5em;
 }
