@@ -1,4 +1,4 @@
-require('es6-shim');
+//require('es6-shim');
 
 //gulp
 var gulp          = require('gulp');
