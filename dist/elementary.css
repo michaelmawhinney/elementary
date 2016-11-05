@@ -76,6 +76,22 @@
 }
 
 /* -- Size classes -- */
+.e-sm {
+  font-size: .667em;
+}
+
+.e-hlf {
+  font-size: .5em;
+}
+
+.e-3rd {
+  font-size: .333em;
+}
+
+.e-qtr {
+  font-size: .25em;
+}
+
 .e-lg {
   font-size: 1.5em;
 }
