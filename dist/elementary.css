@@ -188,8 +188,6 @@
 .e-loader::before,
 .e-loader::after,
 .e-loader {
-  border: 1px solid red;
-  background: white;
   border-radius: 50%;
   width: .333em;
   height: .333em;
@@ -198,6 +196,7 @@
 }
 
 .e-loader {
+  top: -.333em;
   margin: 0 .333em .667em;
   animation-delay: .176s;
 }
