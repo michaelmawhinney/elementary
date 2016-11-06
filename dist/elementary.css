@@ -241,14 +241,25 @@
 }
 
 /* -- Check -- */
+.e-check::before {
+  width: 1em;
+  height: .2em;
+  box-shadow: inset 0 0 0 9em;
+  border-radius: .062em;
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+  top: .783em;
+  left: .151em;
+}
+
 .e-check::after {
-  width: .849em;
-  height: .566em;
-  border-width: 0 0 .2em .2em;
-  border-style: solid;
-  transform: rotate(-45deg) perspective(9em);
-  top: .088em;
-  left: .076em;
+  width: .414em;
+  height: .2em;
+  box-shadow: inset 0 0 0 9em;
+  border-radius: .062em;
+  transform-origin: 0 .2em;
+  transform: rotate(45deg);
+  top: .431em;
 }
 
 /* -- Times -- */
@@ -260,6 +271,7 @@
   top: .4em;
   left: 0;
   transform: rotate(45deg);
+  border-radius: .062em;
 }
 
 .e-times::after {

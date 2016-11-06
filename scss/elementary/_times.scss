@@ -13,6 +13,7 @@ $tt: .2; // thickness
   top: ($tw - $tt) / 2 * $tu;
   left: ($tw - $tl) / 2 * $tu;
   transform: rotate(45deg);
+  border-radius: $tw/16*$tu;
 }
 
 .#{$prefix}-times::after { transform: rotate(-45deg); } 
