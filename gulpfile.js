@@ -1,5 +1,3 @@
-require('es6-shim');
-
 //gulp
 var gulp          = require('gulp');
 
@@ -39,9 +37,10 @@ gulp.task('lint-css', function(){
   return gulp.src('dist/elementary.css')
     .pipe(csslint({
       'box-model': false,
-      'box-sizing': false
+      'box-sizing': false,
+      'order-alphabetical': false
     }))
-    .pipe(csslint.reporter());
+    .pipe(csslint.formatter());
 });
 
 gulp.task('cssmin', function(){
@@ -73,10 +72,6 @@ gulp.task('watch',['sass'],function(){
 gulp.task('default',function(callback){
   runsequence('css',callback);
 });
-
-//gulp.task('css',function(callback){
-//  runsequence('clean','sass','lint','min',callback);
-//});
 
 gulp.task('css',function(callback){
   runsequence('clean','sass','lint-css','cssmin','banner',callback);
