@@ -8,7 +8,7 @@ var rename        = require('gulp-rename');
 var fs            = require('fs');
 
 // scss
-var scsslint      = require('gulp-scss-lint');
+var sasslint      = require('gulp-sass-lint');
 var header        = require('gulp-header');
 
 // css
@@ -20,7 +20,7 @@ var csslint       = require('gulp-csslint');
 
 gulp.task('lint-sass', function() {
   return gulp.src('scss/*.scss')
-    .pipe(scsslint());
+    .pipe(sasslint());
 });
 
 gulp.task('sass', function(){
