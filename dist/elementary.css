@@ -22,6 +22,7 @@
   position: relative;
   width: 1em;
   height: 1em;
+  border: 0 solid;
 }
 
 .e-bars::before,
@@ -59,6 +60,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  border: 0 solid;
 }
 
 /* -- Rotation classes -- */
@@ -336,9 +338,12 @@
   border-right: .5em solid transparent;
   border-top: .363em solid;
   border-left: .5em solid transparent;
+  transform-origin: 50% 16.246%;
   top: .388em;
+  margin-top: .388em;
+  margin-bottom: .249em;
+  height: 0;
 }
-
 .e-star::after {
   border-right: .5em solid transparent;
   border-top: .363em solid;
@@ -348,7 +353,6 @@
   top: -.363em;
   left: -.5em;
 }
-
 .e-star::before {
   border-right: .5em solid transparent;
   border-top: .363em solid;

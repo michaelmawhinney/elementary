@@ -31,6 +31,7 @@ $prefix: e;
   position: relative;
   width: 1em;
   height: 1em;
+  border: 0 solid;
 }
 
 .#{$prefix}-bars::before,   .#{$prefix}-bars::after,
@@ -53,4 +54,5 @@ $prefix: e;
   position: absolute;
   top: 0;
   left: 0;
+  border: 0 solid;
 }

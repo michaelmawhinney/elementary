@@ -5,37 +5,34 @@ $sw: 1; // master width
 
 .#{$prefix}-star {
 
-  border-right: .5em solid transparent;
-  border-top: .5*$TAN36*1em  solid;
-  border-left: .5em solid transparent;
-  // the pentagram math was complication to express as radicals and PHI
-  // that level of precision is not necessary, so the code just needs decimal values
-  // the value below has been verified to center the star vertically
-  top: ($sw * 0.38774300585510365688951) * $su;
+  border-left: $sw/2*$su solid transparent;
+  border-right: $sw/2*$su solid transparent;
+  border-top: $TAN36/2*$sw*$su  solid;
+  height: 0;
+  top: ($sw/2 - $SIN72/2*$sw + $SIN72/$PHI/$PHI*$sw)*$su;
+  margin-top: ($sw/2 - $SIN72/2*$sw + $SIN72/$PHI/$PHI*$sw)*$su;
+  margin-bottom: ($sw/2 - $SIN72/2*$sw + $TAN36*$COS72*$sw)*$su;
+  transform-origin: 50% $TAN18*$sw/2*100%;
 
-}
+  &::after {
+    border-right: $sw/2*$su solid transparent;
+    border-top: $TAN36/2*$sw*$su solid;
+    border-left: $sw/2*$su solid transparent;
+    transform: rotate(72deg) perspective(9em);
+    transform-origin: 50% 45%;
+    top: -$TAN36/2*$sw*$su;
+    left: -$sw/2*$su;
+  }
 
-.#{$prefix}-star::after {
-
-  border-right: .5em solid transparent;
-  border-top: .5*$TAN36*1em solid;
-  border-left: .5em solid transparent;
-  transform: rotate(72deg) perspective(9em);
-  transform-origin: 50% 45%;
-  top: -.5*$TAN36*1em;
-  left: -.5em ;
-
-}
-
-.#{$prefix}-star::before {
-
-  border-right: .5em solid transparent;
-  border-top: .5*$TAN36*1em solid;
-  border-left: .5em solid transparent;
-  transform: rotate(-72deg) perspective(9em);
-  transform-origin: 50% 45%;
-  top: -.5*$TAN36*1em;
-  left: -.5em;
+  &::before {
+    border-right: $sw/2*$su solid transparent;
+    border-top: $TAN36/2*$sw*$su solid;
+    border-left: $sw/2*$su solid transparent;
+    transform: rotate(-72deg) perspective(9em);
+    transform-origin: 50% 45%;
+    top: -$TAN36/2*$sw*$su;
+    left: -$sw/2*$su;
+  }
 
 }
 
