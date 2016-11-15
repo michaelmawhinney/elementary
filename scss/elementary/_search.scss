@@ -10,23 +10,34 @@ $x: $h/2 - $t/2;
 $z: ($m - $w)/2;
 
 .#{$prefix}-search {
-
-  width: $w*$m*1em;
-  height: $w*$m*1em;
+transform-origin: 50% 50%;
+&::before {
+  width: .8*$m*1em;
+  height: .8*$m*1em;
   border: $t*$m*1em solid;
   border-radius: 50%;
-  top: -($m - $w - $t/2)*1em;
-  margin-right: ($m - $w)*1em;
-  margin-bottom: ($m - $w)*1em;
+top: $t/4*$m*1em;
+left: $t/4*$m*1em;
+
+
+//  top: -($m - $w - $t/2)*1em;
+//  margin-right: ($m - $w)*1em;
+//  margin-bottom: ($m - $w)*1em;
+}
 
   &::after {
     width: $t*$m*1em;
     height: $h*$m*1em;
     box-shadow: 0 0 0 9*$m*1em inset;
     border-radius: 0 0 ($t/2)*$m*1em ($t/2)*$m*1em;
+transform-origin: 50% 100%;
     transform: rotate(-45deg);
-    top: ($ix + ($SQRT2/2.5*$t)) * $m*1em;
-    left: ($ix + ($SQRT2/2.5*$t) + $x) * $m*1em;
+//    top: ($ix + ($SQRT2/2.5*$t)) * $m*1em;
+//    left: ($ix + ($SQRT2/2.5*$t) + $x) * $m*1em;
+top: auto;
+left: auto;
+bottom: $t/4*$m*1em;
+right: -$t/4*$m*1em;
   }
 
 }

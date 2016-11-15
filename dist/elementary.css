@@ -187,22 +187,27 @@
 
 /* -- Search -- */
 .e-search {
+  transform-origin: 50% 50%;
+}
+.e-search::before {
   width: .8em;
   height: .8em;
   border: .15em solid;
   border-radius: 50%;
-  top: -.125em;
-  margin-right: .2em;
-  margin-bottom: .2em;
+  top: .037em;
+  left: .037em;
 }
 .e-search::after {
   width: .15em;
   height: .449em;
   box-shadow: 0 0 0 9em inset;
   border-radius: 0 0 .075em .075em;
+  transform-origin: 50% 100%;
   transform: rotate(-45deg);
-  top: .438em;
-  left: .588em;
+  top: auto;
+  left: auto;
+  bottom: .037em;
+  right: -.037em;
 }
 
 /* -- Loader -- */
@@ -335,14 +340,14 @@
 
 /* -- Star -- */
 .e-star {
+  border-left: .5em solid transparent;
   border-right: .5em solid transparent;
   border-top: .363em solid;
-  border-left: .5em solid transparent;
-  transform-origin: 50% 16.246%;
+  height: 0;
   top: .388em;
   margin-top: .388em;
   margin-bottom: .249em;
-  height: 0;
+  transform-origin: 50% 16.246%;
 }
 .e-star::after {
   border-right: .5em solid transparent;
