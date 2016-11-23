@@ -1,0 +1,25 @@
+{
+  "name": "elementary",
+  "version": 0.3.7,
+  "description": "pure css icons",
+  "main": "dist/elementary.css",
+  "authors": [
+    "Michael R Mawhinney Jr"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "icons"
+  ],
+  "homepage": "https://github.com/michaelmawhinney/elementary",
+  "ignore": [
+    "scss",
+    "node_modules",
+    ".csscomb.json",
+    ".gitignore",
+    ".travis.yml",
+    "banner.txt",
+    "gulpfile.js",
+    "package.json"
+  ]
+}
