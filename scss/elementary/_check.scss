@@ -3,26 +3,28 @@
 $cu: 1em; // unit
 $cw: 1; // master icon width
 
-.#{$prefix}-check::before {
+.#{$prefix}-check {
 
-  width: $cw * $cu;
-  height: $cw/5 * $cu;
-  box-shadow: inset 0 0 0 9*$cw*$cu;
-  border-radius: $cw/16*$cu;
-  transform-origin: 0 0;
-  transform: rotate(-45deg);
-  top: (2/5*$cw/$SQRT2 + $cw/2)*$cu;
-  left: ($cw - 6/5*$cw/$SQRT2)*$cu;
+  &::before {
+    width: $cw * $cu;
+    height: $cw/5 * $cu;
+    box-shadow: inset 0 0 0 9*$cw*$cu;
+    border-radius: $cw/16*$cu;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    top: (2/5*$cw/$SQRT2 + $cw/2)*$cu;
+    left: ($cw - 6/5*$cw/$SQRT2)*$cu;
+  }
 
-}
+  &::after {
+    width: ($cw*$SQRT2 - $cw)*$cu;
+    height: ($cw/5)*$cu;
+    box-shadow: inset 0 0 0 9*$cw*$cu;
+    border-radius: $cw/16*$cu;
+    transform-origin: 0 ($cw/5)*$cu;
+    transform: rotate(45deg);
+    top: (8/5*$cw/$SQRT2 - 7/10*$cw)*$cu;
+  }
 
-.#{$prefix}-check::after {
-  width: ($cw*$SQRT2 - $cw)*$cu;
-  height: ($cw/5)*$cu;
-  box-shadow: inset 0 0 0 9*$cw*$cu;
-  border-radius: $cw/16*$cu;
-  transform-origin: 0 ($cw/5)*$cu;
-  transform: rotate(45deg);
-  top: (8/5*$cw/$SQRT2 - 7/10*$cw)*$cu;
 }
 
