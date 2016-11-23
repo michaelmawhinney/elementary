@@ -76,3 +76,7 @@ gulp.task('default',function(callback){
 gulp.task('css',function(callback){
   runsequence('clean','sass','lint-css','cssmin','banner',callback);
 });
+
+gulp.task('test',function(callback){
+  runsequence('lint-sass','css',callback);
+});
