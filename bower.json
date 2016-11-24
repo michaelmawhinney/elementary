@@ -1,6 +1,6 @@
 {
   "name": "elementary",
-  "version": 0.3.7,
+  "version": "0.3.7",
   "description": "pure css icons",
   "main": "dist/elementary.css",
   "authors": [
