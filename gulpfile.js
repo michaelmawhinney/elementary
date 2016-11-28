@@ -15,7 +15,7 @@ var header        = require('gulp-header');
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
 var csscomb       = require('gulp-csscomb');  
-var cssmin        = require('gulp-cssmin');
+var cssclean      = require('gulp-clean-css');
 var csslint       = require('gulp-csslint');
 
 gulp.task('lint-sass', function() {
@@ -43,9 +43,9 @@ gulp.task('lint-css', function(){
     .pipe(csslint.formatter());
 });
 
-gulp.task('cssmin', function(){
+gulp.task('cssclean', function(){
   return gulp.src('dist/elementary.css')
-    .pipe(cssmin())
+    .pipe(cssclean())
     .pipe(rename({
       suffix: '.min'
     }))
@@ -74,7 +74,7 @@ gulp.task('default',function(callback){
 });
 
 gulp.task('css',function(callback){
-  runsequence('clean','sass','lint-css','cssmin','banner',callback);
+  runsequence('clean','sass','lint-css','cssclean','banner',callback);
 });
 
 gulp.task('test',function(callback){
