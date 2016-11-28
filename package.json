@@ -7,14 +7,13 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.0.3",
     "del": "^2.2.0",
     "glob": "~7.1.1",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "~3.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "~3.1.1",
+    "gulp-clean-css": "^2.0.13",
     "gulp-csscomb": "~3.0.6",
     "gulp-csslint": "~1.0.0",
-    "gulp-cssmin": "^0.1.7",
     "gulp-header": "~1.8.8",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "~2.3.2",
@@ -24,15 +23,14 @@
   "engines": {
     "node": ">=0.10.1"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "bugs": {
     "url": "https://github.com/michaelmawhinney/elementary/issues"
   },
   "version": "0.3.7",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
   "author": "Michael R Mawhinney Jr"
 }
