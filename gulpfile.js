@@ -66,7 +66,7 @@ gulp.task('watch',['sass'],function(){
 });
 
 gulp.task('default',function(callback){
-  runsequence('css',callback);
+  runsequence('test',callback);
 });
 
 gulp.task('css',function(callback){
