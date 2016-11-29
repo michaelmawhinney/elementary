@@ -18,9 +18,8 @@ var csscomb       = require('gulp-csscomb');
 var cssclean      = require('gulp-clean-css');
 var csslint       = require('gulp-csslint');
 
-gulp.task('lint-sass', function() {
-  return gulp.src('scss/*.scss')
-    .pipe(sasslint());
+gulp.task('clean', function () {  
+  return del(['dist']);
 });
 
 gulp.task('sass', function(){
@@ -31,12 +30,6 @@ gulp.task('sass', function(){
     }))
     .pipe(csscomb())
     .pipe(gulp.dest('dist'))
-});
-
-gulp.task('lint-css', function(){
-  return gulp.src('dist/elementary.css')
-    .pipe(csslint())
-    .pipe(csslint.formatter());
 });
 
 gulp.task('cssclean', function(){
@@ -57,22 +50,30 @@ gulp.task('banner', function(){
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', function () {  
-  return del(['dist']);
+gulp.task('lint-sass', function() {
+  return gulp.src('scss/*.scss')
+    .pipe(sasslint());
+});
+
+gulp.task('lint-css', function(){
+  return gulp.src('dist/elementary.css')
+    .pipe(csslint())
+    .pipe(csslint.formatter());
+});
+
+gulp.task('css',function(callback){
+  runsequence('clean','sass','cssclean','banner',callback);
 });
 
 gulp.task('watch',['sass'],function(){
   gulp.watch('scss/**/*.scss', ['sass']); 
 });
 
-gulp.task('default',function(callback){
-  runsequence('css',callback);
-});
-
-gulp.task('css',function(callback){
-  runsequence('clean','sass','lint-css','cssclean','banner',callback);
-});
-
 gulp.task('test',function(callback){
-  runsequence('lint-sass','css',callback);
+  runsequence('lint-sass','lint-css',callback);
 });
+
+gulp.task('default',function(callback){
+  runsequence('css','test',callback);
+});
+
