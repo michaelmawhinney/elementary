@@ -1,8 +1,11 @@
 {
   "name": "elementary",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "pure css icons",
-  "main": "dist/elementary.css",
+  "main": [
+    "dist/elementary.css",
+    "scss/elementary.scss"
+  ],
   "authors": [
     "Michael R Mawhinney Jr"
   ],
@@ -11,15 +14,9 @@
     "css",
     "icons"
   ],
-  "homepage": "https://github.com/michaelmawhinney/elementary",
+  "homepage": "https://git.io/elementary",
   "ignore": [
-    "scss",
     "node_modules",
-    ".csscomb.json",
-    ".gitignore",
-    ".travis.yml",
-    "banner.txt",
-    "gulpfile.js",
-    "package.json"
+    "test.html"
   ]
 }

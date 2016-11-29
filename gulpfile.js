@@ -35,11 +35,7 @@ gulp.task('sass', function(){
 
 gulp.task('lint-css', function(){
   return gulp.src('dist/elementary.css')
-    .pipe(csslint({
-      'box-model': false,
-      'box-sizing': false,
-      'order-alphabetical': false
-    }))
+    .pipe(csslint())
     .pipe(csslint.formatter());
 });
 

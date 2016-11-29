@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/michaelmawhinney/elementary/issues"
   },
-  "version": "0.3.7",
+  "version": "0.3.8",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp test"
