@@ -1,6 +1,10 @@
 {
   "name": "elementary-css",
   "description": "pure css icons",
+  "keywords": [
+    "css",
+    "icons"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/michaelmawhinney/elementary.git"
