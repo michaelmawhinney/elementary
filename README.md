@@ -88,11 +88,11 @@ Watches the Sass source files and automatically recompiles them to CSS whenever 
 
 ##### `gulp test` (Run tests)
 
-Lints Sass files, compiles, minifies, then lints CSS files.
+Lints Sass and CSS files.
 
 ##### `gulp` (Build and run tests)
 
-This is the same as running `gulp test`.
+This is the same as running `gulp css` and `gulp test` together.
 
 #### Troubleshooting
 
