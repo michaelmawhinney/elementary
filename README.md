@@ -92,7 +92,7 @@ Lints Sass files, compiles, minifies, then lints CSS files.
 
 ##### `gulp` (Build and run tests)
 
-This is the same as running `gulp css`.
+This is the same as running `gulp test`.
 
 #### Troubleshooting
 
