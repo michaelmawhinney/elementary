@@ -25,7 +25,7 @@ Several options are available:
 
 ### What's included
 
-#### Precompiled CSS
+#### Precompiled and minified CSS
 
 ```
 dist/
@@ -63,7 +63,7 @@ scss/
 
 ### Compiling
 
-**elementary uses [Gulp](http://gulpjs.com) for its build system.**
+**elementary** uses [Gulp](http://gulpjs.com) for its build system.
 
 #### Installing Gulp
 
@@ -110,4 +110,4 @@ See [the Releases section of the GitHub project](https://github.com/michaelmawhi
 
 ## Copyright and license
 
-Code copyright 2016 Michael R Mawhinney Jr. Code released under the [MIT License](https://github.com/michaelmawhinney/elementary/blob/master/LICENSE).
+Code copyright 2016 Michael R Mawhinney Jr and released under the [MIT License](https://github.com/michaelmawhinney/elementary/blob/master/LICENSE).
