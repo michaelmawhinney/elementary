@@ -15,7 +15,7 @@ var header        = require('gulp-header');
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
 var csscomb       = require('gulp-csscomb');  
-var cssclean      = require('gulp-clean-css');
+var cssclean      = require('gulp-csso');
 var csslint       = require('gulp-csslint');
 
 gulp.task('clean', function () {  
